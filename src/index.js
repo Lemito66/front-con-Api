@@ -24,6 +24,7 @@ root.render(
               path="/formularioArticulo"
               element={<FormularioArticulo />}
             />
+            <Route exact path="/modificarArticulo/:id" element={<FormularioArticulo />} />
           </Routes>
           {/* <ListaDeArticulos /> */}
         </div>

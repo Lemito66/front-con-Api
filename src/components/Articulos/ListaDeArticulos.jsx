@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate  } from "react-router-dom";
 
 import * as ArticuloServer from "./ArticuloServer";
 
 const ListaDeArticulos = () => {
   const [articulos, setArticulos] = useState([]);
+  const history = useNavigate();
 
   const articulosLista = async () => {
     try {
@@ -44,7 +46,10 @@ const ListaDeArticulos = () => {
             <td>{articulo.nombre_articulo}</td>
             <td>{articulo.descripcion_articulo}</td>
             <td>{articulo.cantidad_disponible_del_articulo}</td>
-            <td></td>
+            <td><button
+                className="btn btn-info my-2"
+                onClick={() => history(`/modificarArticulo/${articulo.id}`	)}
+              >Modificar</button></td>
             <td>
               <button
                 className="btn btn-danger my-2"
