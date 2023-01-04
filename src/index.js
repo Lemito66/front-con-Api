@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 //Components
+import NavBar from "./components/NavBar/NavBar";
 import ListaDeArticulos from "./components/Articulos/ListaDeArticulos";
 import FormularioArticulo from "./components/Articulos/FormularioArticulo";
 
@@ -12,14 +13,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div className="container my-4">
+  <div>
     <React.StrictMode>
       <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<ListaDeArticulos />} />
-          <Route path="/formularioArticulo" element={<FormularioArticulo />} />
-        </Routes>
-        {/* <ListaDeArticulos /> */}
+        <NavBar />
+        <div className="container my-4">
+          <Routes>
+            <Route exact path="/" element={<ListaDeArticulos />} />
+            <Route
+              path="/formularioArticulo"
+              element={<FormularioArticulo />}
+            />
+          </Routes>
+          {/* <ListaDeArticulos /> */}
+        </div>
       </BrowserRouter>
     </React.StrictMode>
   </div>

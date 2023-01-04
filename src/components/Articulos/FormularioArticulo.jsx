@@ -1,42 +1,63 @@
+import '../../inputText.css';
 const FormularioArticulo = () => {
   return (
     <div>
       {/* Crear un formulario para 4 campos */}
-      <form>
+      <form className='shadow-sm p-3 mb-5 bg-body rounded'>
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
-            Email address
+            Nombre
           </label>
           <input
-            type="email"
+            type="text"
             className="form-control"
-            id="exampleInputEmail1"
+            id="exampleInputNombre"
             aria-describedby="emailHelp"
             required
+            placeholder="Nombre del artículo"
           />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
-          </div>
         </div>
         <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
-            Password
+          <label for="exampleInputEmail1" className="form-label">
+            Código
           </label>
           <input
-            type="password"
+            type="text"
             className="form-control"
-            id="exampleInputPassword1"
+            id="exampleInputNombre"
+            aria-describedby="emailHelp"
             required
+            placeholder="Código del artículo"
           />
         </div>
-        <div className="mb-3 form-check">
-          <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-          <label className="form-check-label" for="exampleCheck1">
-            Check me out
+        <div className="mb-3">
+          <label for="exampleInputEmail1" className="form-label">
+            Descripción
           </label>
+          <input
+            type="text"
+            className="form-control"
+            id="exampleInputNombre"
+            aria-describedby="emailHelp"
+            required
+            placeholder="Descripción del artículo"
+          />
+        </div>
+        <div className="mb-3">
+          <label for="exampleInputEmail1" className="form-label">
+            Cantidad Inicial
+          </label>
+          <input
+            type="number"
+            className="form-control"
+            id="exampleInputNombre"
+            aria-describedby="emailHelp"
+            required
+            placeholder="Nombre del artículo"
+          />
         </div>
         <button type="submit" className="btn btn-primary">
-          Submit
+          Enviar
         </button>
       </form>
     </div>
